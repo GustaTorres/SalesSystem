@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.psgv.salessystem.domain.Categoria;
 
 @RestController
-@RequestMapping(value="/categorias")
+@RequestMapping(value = "/categorias")
 public class CategoriaResource {
-    
-    @RequestMapping(method=RequestMethod.GET)
-    public List<Categoria> listar(){
-        
-        Categoria c1 = new Categoria(1,"Informática");
-        Categoria c2 = new Categoria(1,"Escritório");
-        
+
+    @RequestMapping(method = RequestMethod.GET)
+    public List<Categoria> listar() {
+
+        Categoria c1 = new Categoria(1, "Informática");
+        Categoria c2 = new Categoria(2, "Escritório");
+
         List<Categoria> list = new ArrayList<>();
         list.add(c1);
         list.add(c2);
-        
+
         return list;
     }
 
